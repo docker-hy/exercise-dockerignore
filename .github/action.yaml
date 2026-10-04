@@ -1,0 +1,15 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test_lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build project for linting
+        run: npm ci
+      - name: Run oxlint and ts checks
+        run: npm run lint
