@@ -1,32 +1,7 @@
-# React + TypeScript + Vite
+# For demonstrating importance of controlling the content of an docker image
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Just created a starting point for a React-based application. The content of this repository could be built on any techonlogy. The content added locally "by accident" to the Docker image does not yet make any sense when compared against the functionality of the app. Folders are already created for the documentation and tests, although they don't contain anything meaningful yet; however, with this structure, we are mimicking a real project. 
 
-Currently, two official plugins are available:
+The whole purpose of this example repository is to show how things could go wrong if we do not control what is added to the image during the build phase.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+If the image is publicly available, anyone can pull and run it, and take a look what they can find inside the container.
