@@ -1,3 +1,17 @@
+# agentic AI: 
+# NOTE, some of files used for coding with agentic AI may be useful to have in GitHub.
+# However, it is better just to allow those files needed in repository and block all other stuff
+# and avoid leaking sensitive information.
+**/.claude
+**/.gemini
+**/.cursor
+**/.specstory
+
+MEMORY.md
+GEMINI.md
+CLAUDE.md
+AGENTS.md
+
 # Logs
 logs
 *.log
